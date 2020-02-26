@@ -1,0 +1,18 @@
+{
+    "extends": [
+      "airbnb"
+    ],
+    "plugins": [
+      "prettier"
+    ],
+    "rules": {
+      "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+    },
+    "jest/consistent-test-it": ["error", { "fn": "it" }],
+    "jest/lowercase-name": "error",
+    "jest/no-test-prefixes": "error",
+    "jest/prefer-to-be-null": "error",
+    "jest/prefer-to-be-undefined": "error",
+    "jest/valid-describe": "error",
+    "jest/valid-expect-in-promise": "error"
+  }
