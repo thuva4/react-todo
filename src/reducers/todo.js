@@ -6,8 +6,8 @@ import {
   DELETE_ALL_TODO_SUCCESS,
 } from '../constants/actionTypes';
 
-/** 
- * Add, delete, update and filter actions on todoList 
+/**
+ * Add, delete, update and filter actions on todoList
  */
 const todoList = (state = List(), action) => {
   switch (action.type) {

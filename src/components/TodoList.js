@@ -17,7 +17,7 @@ const mapDispatchToProps = (dispatch) => ({
   removeAllTodos: () => dispatch(removeAllTodoRequested()),
 });
 
-/** 
+/**
  * Contains the todo list
  */
 const ConnectedTodoList = ({
@@ -34,11 +34,11 @@ const ConnectedTodoList = ({
     <div>
       <ul>
         {todoList.map((el, index) => {
-          //Get the next possible State
+          // Get the next possible State
           const todoNextStatus = el.get('isCompleted')
             ? 'Not Completed'
             : 'Completed';
-          //Get current state
+          // Get current state
           const todoStatus = el.get('isCompleted') ? 'Completed' : 'Pending';
           return (
             <li key={el.get('id')}>

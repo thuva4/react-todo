@@ -7,18 +7,18 @@ const mapDispatchToProps = (dispatch) => ({
   addTodo: (todo) => dispatch(addTodoRequested(todo)),
 });
 
-/** 
- * Todo Creator component 
+/**
+ * Todo Creator component
  */
 const ConnectedTodoCreator = (props) => {
   const [todoTitle, setTodoTitle] = useState('');
-  
-  //Save the title input changes to internal states
+
+  // Save the title input changes to internal states
   const onTitleInputChanged = (e) => {
     setTodoTitle(e.target.value);
   };
 
-  //Call the action when Create button clicked
+  // Call the action when Create button clicked
   const onCreateButtonClicked = () => {
     props.addTodo({
       title: todoTitle,

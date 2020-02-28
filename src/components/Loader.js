@@ -1,14 +1,14 @@
-import React from "react";
-import { connect } from "react-redux";
-import PropTypes from "prop-types";
+import React from 'react';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
-const mapStatesToProps = state => ({
-  isLoading: state.loader
+const mapStatesToProps = (state) => ({
+  isLoading: state.loader,
 });
 /**
  * Overlay Loader Component to Show the progress
  */
-const ConnectedLoader = props => {
+const ConnectedLoader = (props) => {
   const { isLoading } = props;
 
   return (
@@ -25,11 +25,11 @@ const ConnectedLoader = props => {
 };
 
 ConnectedLoader.propTypes = {
-  isLoading: PropTypes.bool
+  isLoading: PropTypes.bool,
 };
 
 ConnectedLoader.defaultProps = {
-  isLoading: false
+  isLoading: false,
 };
 
 const Loader = connect(mapStatesToProps)(ConnectedLoader);

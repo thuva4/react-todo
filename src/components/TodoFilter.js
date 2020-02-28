@@ -15,19 +15,18 @@ const mapStatesToProps = (state) => ({
   todoListCounts: getTodoListCounts(state),
 });
 
-/** 
+/**
  * Todo filter component
  */
 const ConnectedTodoFilter = (props) => {
-  
-  //calls the action when filter button clicked
+  // calls the action when filter button clicked
   const onFilterButtonClicked = (e) => {
     const filterValue = e.target.id;
     props.filterTodo({ filter: filterValue });
   };
 
-  // Disabled the active filter button 
-  // Disabled all the filter button if total todo count is zero 
+  // Disabled the active filter button
+  // Disabled all the filter button if total todo count is zero
   const { filter, todoListCounts } = props;
 
   return (

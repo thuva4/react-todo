@@ -8,5 +8,5 @@ export default combineReducers({
   todoList,
   toasts,
   loader,
-  filter
+  filter,
 });

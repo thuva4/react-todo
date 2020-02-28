@@ -1,7 +1,7 @@
 import { List, Map } from 'immutable';
 import { ADD_TODO_ERROR, REMOVE_TOAST } from '../constants/actionTypes';
 
-/** 
+/**
  * Sets the error messages in the Store
  */
 const toastList = (state = List(), action) => {

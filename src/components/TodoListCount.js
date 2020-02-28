@@ -8,8 +8,8 @@ const mapStateToProps = (state) => ({
   todoListCounts: getTodoListCounts(state),
 });
 
-/** 
- * Contains todo counts details(all, completed, pending) 
+/**
+ * Contains todo counts details(all, completed, pending)
  */
 const ConnectedTodoListCount = ({ todoListCounts }) => (
   <div className="container">
