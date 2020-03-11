@@ -3,15 +3,13 @@ import {
   ADD_TODO_REQUESTED,
   DELETE_ALL_TODO_SUCCESS,
   DELETE_TODO_SUCCESS,
-  REMOVE_TOAST,
   COMPLETE_TODO_REQUESTED,
   DELETE_TODO_REQUESTED,
   DELETE_ALL_TODO_REQUESTED,
   FILTER_TODO_REQUESTED,
   ADD_TODO_SUCCESS,
   COMPLETE_TODO_SUCCESS,
-  SET_IS_LOADING,
-} from '../constants/actionTypes';
+} from './constants/actionTypes';
 
 /**
  * Saga worker action to handle the add todo event
@@ -22,14 +20,6 @@ const addTodoRequested = (payload) => ({ type: ADD_TODO_REQUESTED, payload });
  * handles the add todo success event
  */
 const addTodoSuccess = (payload) => ({ type: ADD_TODO_SUCCESS, payload });
-
-/**
- * handles the remove toast event
- */
-const removeToast = (payload) => ({
-  type: REMOVE_TOAST,
-  payload,
-});
 
 /**
  * Saga worker action to handle the remove todo by id event
@@ -83,17 +73,8 @@ const filterTodoSuccess = (payload) => ({
   payload,
 });
 
-/**
- * handles the set isLoading event
- */
-const setLoading = (payload) => ({
-  type: SET_IS_LOADING,
-  payload,
-});
-
 export {
   addTodoSuccess,
-  removeToast,
   completeTodoSuccess,
   removeTodoSuccess,
   removeAllTodoSuccess,
@@ -103,5 +84,4 @@ export {
   removeAllTodoRequested,
   filterTodoRequested,
   addTodoRequested,
-  setLoading,
 };

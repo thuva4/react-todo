@@ -14,9 +14,10 @@ import {
   removeTodoSuccess,
   removeAllTodoSuccess,
   filterTodoSuccess,
-  setLoading,
   completeTodoSuccess,
-} from '../actions/index';
+} from '../actions';
+
+import setLoading from '../../loader/actions';
 
 export const delay = (ms) => new Promise((res) => setTimeout(res, ms));
 

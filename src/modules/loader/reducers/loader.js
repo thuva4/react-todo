@@ -1,6 +1,6 @@
 import {
   SET_IS_LOADING,
-} from '../constants/actionTypes';
+} from '../../todo/constants/actionTypes';
 
 /**
  * Sets the isLoading in the store

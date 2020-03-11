@@ -1,6 +1,6 @@
 import { createSelector } from 'reselect';
 import { Map } from 'immutable';
-import { SHOW_ALL, SHOW_COMPLETED, SHOW_PENDING } from '../constants/utils';
+import { SHOW_ALL, SHOW_COMPLETED, SHOW_PENDING } from '../constants';
 
 const getTodoFilter = (state) => state.filter;
 const getTodoList = (state) => state.todoList;

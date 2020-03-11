@@ -2,8 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { Map } from 'immutable';
-import { filterTodoRequested } from '../actions/index';
-import { SHOW_ALL, SHOW_COMPLETED, SHOW_PENDING } from '../constants/utils';
+import { filterTodoRequested } from '../actions';
+import { SHOW_ALL, SHOW_COMPLETED, SHOW_PENDING } from '../constants';
 import { getTodoListCounts } from '../selectors';
 
 const mapDispatchToProps = (dispatch) => ({

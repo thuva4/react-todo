@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { addTodoRequested } from '../actions/index';
+import { addTodoRequested } from '../actions';
 
 const mapDispatchToProps = (dispatch) => ({
   addTodo: (todo) => dispatch(addTodoRequested(todo)),

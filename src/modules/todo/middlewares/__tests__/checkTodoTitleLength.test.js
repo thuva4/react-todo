@@ -1,6 +1,7 @@
 import checkTodoTitleLength from '../checkTodoTitleLength'; // this is your middleware
-import { ADD_TODO_SUCCESS, ADD_TODO_ERROR } from '../../constants/actionTypes';
-import { TODO_TITLE_EMPTY_ERROR_MESSAGE, TODO_TITLE_LENGTH_ERROR_MESSAGE } from '../../constants/messages';
+import { ADD_TODO_SUCCESS } from '../../constants/actionTypes';
+import { ADD_TODO_ERROR } from '../../../errors/constants/actionTypes';
+import { TODO_TITLE_EMPTY_ERROR_MESSAGE, TODO_TITLE_LENGTH_ERROR_MESSAGE } from '../../../errors/constants/messages';
 // middleware needs those as parameters, usually calling next(action) at the end to proceed
 const next = jest.fn();
 const store = jest.fn();

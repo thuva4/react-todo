@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { List, Map } from 'immutable';
-import { completeTodoRequested, removeTodoRequested, removeAllTodoRequested } from '../actions/index';
+import { completeTodoRequested, removeTodoRequested, removeAllTodoRequested } from '../actions';
 import { getVisibleTodoList, getTodoListCounts } from '../selectors';
 
 

@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { List } from 'immutable';
-import { removeToast } from '../actions/index';
+import { removeToast } from '../actions';
 import ToastMessage from './ToastMessage';
 
 const mapStatesToProps = (state) => ({

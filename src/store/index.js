@@ -1,22 +1,31 @@
 /* eslint-disable no-undef */
-import { createStore, applyMiddleware } from 'redux';
+import { createStore, applyMiddleware, combineReducers } from 'redux';
 import createSagaMiddleware from 'redux-saga';
 import { composeWithDevTools } from 'redux-devtools-extension';
-import rootReducer from '../reducers/index';
-import checkTodoTitleLength from '../middlewares/checkTodoTitleLength';
+import filter from '../modules/todo/reducers/filter';
+import loader from '../modules/loader/reducers/loader';
+import todoList from '../modules/todo/reducers/todo';
+import toasts from '../modules/errors/reducers/toasts';
+import checkTodoTitleLength from '../modules/todo/middlewares/checkTodoTitleLength';
 
 
-import todo from '../sagas/index';
+import saga from '../modules/todo/sagas/index';
 
 const sagaMiddleware = createSagaMiddleware();
+const todoRoot = combineReducers({
+  filter,
+  loader,
+  todoList,
+  toasts,
+});
 
 const store = createStore(
-  rootReducer,
+  todoRoot,
   composeWithDevTools(
     applyMiddleware(sagaMiddleware, checkTodoTitleLength),
   ),
 );
 
-sagaMiddleware.run(todo);
+sagaMiddleware.run(saga);
 
 export default store;
