@@ -1,7 +1,8 @@
 import { ADD_TODO_ERROR, REMOVE_TOAST } from './constants/actionTypes';
 import { TODO_TITLE_LENGTH_ERROR_MESSAGE, TODO_TITLE_EMPTY_ERROR_MESSAGE } from './constants/messages';
+
 /**
- * handles the filter todo list Success event
+ * handles handles title length error
  */
 const addTodoLengthLimitError = () => ({
   type: ADD_TODO_ERROR,
@@ -12,7 +13,7 @@ const addTodoLengthLimitError = () => ({
 });
 
 /**
-   * handles the set isLoading event
+   * handles the empty title error
    */
 const addTodoEmptyTitleError = () => ({
   type: ADD_TODO_ERROR,
